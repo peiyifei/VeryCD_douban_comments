@@ -1,0 +1,16 @@
+{
+	"manifest_version": 2,
+	"name": "VeryCD与豆瓣的合体",
+	"version": "1.0",
+	"description": "在VeryCD网站查看豆瓣评论",
+	"browser_action": {
+		"default_icon": "icon.jpg"
+	},
+	"content_scripts": [{
+      "matches": ["http://www.verycd.com/entries/*"],
+      "js": ["js/zepto.js", "js/class.js", "js/content_script.js"],
+      "css": ["css/style.css"],
+      "run_at": "document_end"
+    }],
+    "permissions": ["http://www.verycd.com/entries/*", "http://*.douban.com/*"]
+}
